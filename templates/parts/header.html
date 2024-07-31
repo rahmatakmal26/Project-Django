@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            {% block navigation %}
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            {% endblock %}
+        </nav>
+        <button id="tema-mode" aria-label="Ganti mode">🌙</button>
+    </header>
+
+    <main>
+        {% block content %}
+      
+        {% endblock %}
+    </main>
+    <script src="{% static 'js/tema.js' %}"></script>
+</body>
+</html>
